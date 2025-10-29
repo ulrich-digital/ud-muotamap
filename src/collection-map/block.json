@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+"title": "collection map",
+  "name": "muotamap/collection-map",
+  "supports": {
+        "html": false,
+        "className": true,
+        "customClassName": true
+    },
+  "editorScript": "file:./edit.js",
+"script": "muotamap-view-collection",
+  "style": "file:../global.css",
+  "editorStyle": "file:../editor.css"
+}

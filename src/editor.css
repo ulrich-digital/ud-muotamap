@@ -1,0 +1,276 @@
+/* Marker im Editor und auf der Overlay-Karte */
+.wp-block-muotamap .leaflet-map-pane svg.custom-marker,
+.components-modal__frame.uldi_openstreetmap_overlay .custom-marker {
+	filter: drop-shadow(var(--wp--preset--shadow--natural));
+	fill: var(--wp--preset--color--petrol);
+}
+
+/* Toolbar des Editors */
+.block-editor-block-toolbar {
+	z-index: 1000;
+}
+
+/* Block-Container */ 
+.wp-block-muotamap {
+	box-sizing: border-box;
+	margin-top: 3em !important;
+	margin-bottom: 3em !important;
+}
+
+.wp-block-muotamap-single-map.dragging-on { cursor: move; }
+.wp-block-muotamap-single-map.dragging-on:active { cursor: move; }
+
+/* Zoom Buttons */
+.wp-block-muotamap .leaflet-control-zoom.leaflet-bar.leaflet-control {
+	border-radius: 30px;
+	border-radius: 30px;
+	overflow: hidden;
+	border: none;
+	background: white;
+	filter: drop-shadow(var(--wp--preset--shadow--natural));
+}
+
+/* Openstreetmap-Hinweis */
+.wp-block-muotamap .leaflet-control-attribution.leaflet-control {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Button: Marker hinzufügen*/
+.wp-block-muotamap .custom-control.leaflet-control-add-marker .custom-control-button {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 36px;
+    padding: 6px 12px;
+    margin: 0 10px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--wp-admin-theme-color);
+    border: 0;
+    border-radius: 20px;
+    box-shadow: var(--wp--preset--shadow--natural);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: box-shadow 0.1s linear;
+}
+
+.wp-block-muotamap .custom-control.leaflet-control-add-marker .custom-control-button svg{
+    height: 1em;
+    fill: white;
+    margin-right: 6px;
+}
+
+.wp-block-muotamap .custom-control.leaflet-control-add-marker .custom-control-button i {
+	margin-right: 5px;
+}
+
+/* =============================================================== *\ 
+   Overlay
+\* =============================================================== */
+.uldi_openstreetmap_overlay {
+    width: 800px !important; /* Breite des Overlays */
+}
+
+/* Overlay: Karte */
+.uldi_openstreetmap_overlay .uldi_openstreetmap_overlay_map {
+	height: 300px;
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+/* Overlay: Openstreetmap-Hinweis */
+.uldi_openstreetmap_overlay .leaflet-control-attribution.leaflet-control {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Overlay: Labels wie Überschrift, Text usw. */
+.uldi_openstreetmap_overlay .custom-label-wrapper label,
+.uldi_openstreetmap_overlay .custom-label-wrapper label.components-truncate,
+.uldi_openstreetmap_overlay .custom-label-wrapper .custom_label,
+.uldi_openstreetmap_overlay .custom-label-wrapper .title{
+	font-size: 15px;
+	font-weight: 600;
+	color: rgb(50, 55, 60);
+	text-transform: none;
+	margin-top: 2em;
+	margin-bottom: 8px;
+	line-height: 1em;
+}
+
+.uldi_openstreetmap_overlay .custom-label-wrapper .title{
+	margin-top: 0;
+}
+
+.custom-label-wrapper .custom_label {
+	margin-bottom: 8px;
+}
+
+.uldi_openstreetmap_overlay .custom-label-wrapper .media_upload_check {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+}
+
+.uldi_openstreetmap_overlay .custom-label-wrapper .media_upload_check .components-button.is-destructive{
+	border: 1px solid;
+}
+
+.uldi_openstreetmap_overlay .custom-label-wrapper .media_upload_check .components-button.is-destructive:hover{
+	background-color: var(--wp--preset--color--ui-error-500);
+	color: white!important;
+}
+
+.uldi_openstreetmap_overlay .media_container {
+	margin-top: 8px;
+}
+
+.uldi_openstreetmap_overlay .media_container img {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 10px;
+}
+
+.uldi_openstreetmap_overlay .close_modal {
+	margin-top: 10px;
+}
+
+/* Bestätigung, dass Marker gelöscht werden soll */
+.uldi_openstreetmap_overlay_delete_marker .modal-actions{
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;	
+}
+
+.uldi_openstreetmap_overlay_delete_marker .is-primary.is-warning{
+	background: var(--wp--preset--color--ui-error-500);
+}
+
+.uldi_openstreetmap_overlay_delete_marker .is-primary.is-warning:hover{
+	background: var(--wp--preset--color--ui-error-700);
+}
+
+.uldi_openstreetmap_overlay .components-button.is-secondary:hover{
+	background-color: var(--wp-admin-theme-color);
+	color: white;
+}
+
+
+/* =============================================================== *\ 
+   InspectorControl (rechte Seitenleiste)
+\* =============================================================== */
+.inspector_container_map_markers .single_marker {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.inspector_container_map_markers .single_marker .marker_bezeichnung {
+	display: flex;
+	flex: 1;
+	font-weight: 400;
+}
+
+/* Marker editieren + löschen */
+.inspector_container_map_markers .single_marker .edit,
+.inspector_container_map_markers .single_marker .delete {
+	line-height: 1em;
+	height: auto;
+	padding: 8px 5px;
+}
+
+.inspector_container_map_markers .single_marker i {
+	font-size: 16px;
+}
+
+/* Marker löschen*/
+.inspector_container_map_markers .single_marker .delete {
+	color: var(--wp--preset--color--ui-error-500);
+	opacity: 0.6;
+	transition: all 0.2s;
+}
+
+.inspector_container_map_markers .single_marker .delete:hover {
+	opacity: 1;
+}
+
+
+/* =============================================================== *\ 
+   Popup + Cloned-Popup
+\* =============================================================== */
+.wp-block-muotamap .leaflet-popup{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .first_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .first_row svg{
+    fill: var(--wp--preset--color--yellow);
+	fill: var(--wp--preset--color--sand-dark);
+}
+
+.wp-block-muotamap .cloned-leaflet-popup figure{
+	margin-bottom: 0;
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .wave_button .post_link{
+    display: flex;
+    width: auto;
+    width: 77px;
+	text-decoration: none;
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .wave_button .post_link svg{
+	fill: var(--wp--preset--color--sand-dark);
+	width: 16px;
+	margin-right: 6px;
+}
+
+/* Edit-, Delete- und Close-Buttons */
+.wp-block-muotamap .cloned-leaflet-popup .leaflet-popup-close-button{
+	display: none;
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .button.edit,
+.wp-block-muotamap .cloned-leaflet-popup .button.delete{
+	background-color: white;
+	fill: var(--wp-admin-theme-color);
+	border: 1px solid var(--wp-admin-theme-color);
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .button.edit:hover{
+	background-color: var(--wp-admin-theme-color);
+	fill: white;	
+}
+	
+.wp-block-muotamap .cloned-leaflet-popup .button.delete{
+	fill: var(--wp--preset--color--ui-error-500);
+	border: 1px solid var(--wp--preset--color--ui-error-500);
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .button.delete:hover{
+	background-color: var(--wp--preset--color--ui-error-500);
+	fill: white;
+}
+
+.wp-block-muotamap .cloned-leaflet-popup .button.route{
+	display: none;
+}
+
+.wp-block-muotamap .leaflet-tile{
+max-width: none;
+}
