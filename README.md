@@ -22,7 +22,7 @@ Das Plugin integriert zwei Blöcke – eine **Einzelkarte** und eine **Sammlungs
 ## Screenshots
 
 ![Frontend-Ansicht](./assets/ud-muotamap.png)
-*Darstellung im Frontend.*
+*Die Muotamap im Frontend.*
 
 ![Editor-Ansicht](./assets/editor-view.png)
 Karte im Gutenberg-Editor mit Vorschau der Station oder Sammlung.*
